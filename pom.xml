@@ -10,9 +10,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.fredericoffs</groupId>
-	<artifactId>order</artifactId>
+	<artifactId>sales</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>order</name>
+	<name>sales</name>
 	<description>API </description>
 
 	<properties>
