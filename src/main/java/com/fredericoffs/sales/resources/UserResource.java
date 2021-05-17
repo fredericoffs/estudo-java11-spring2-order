@@ -1,4 +1,4 @@
-package com.fredericoffs.order.resources;
+package com.fredericoffs.sales.resources;
 
 import java.util.List;
 
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.fredericoffs.order.entities.User;
-import com.fredericoffs.order.services.UserService;
+import com.fredericoffs.sales.entities.User;
+import com.fredericoffs.sales.services.UserService;
 
 // recurso web implementado por um controlador REST
 @RestController

@@ -1,4 +1,4 @@
-package com.fredericoffs.order.entities;
+package com.fredericoffs.sales.entities;
 
 import java.io.Serializable;
 

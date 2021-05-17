@@ -1,4 +1,4 @@
-package com.fredericoffs.order.config;
+package com.fredericoffs.sales.config;
 
 import java.util.Arrays;
 
@@ -7,8 +7,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
-import com.fredericoffs.order.entities.User;
-import com.fredericoffs.order.repositories.UserRepository;
+import com.fredericoffs.sales.entities.User;
+import com.fredericoffs.sales.repositories.UserRepository;
 
 //Classe específica de configuração para o perfil de teste
 @Configuration
