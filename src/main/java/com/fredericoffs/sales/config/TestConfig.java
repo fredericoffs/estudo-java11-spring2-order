@@ -8,9 +8,11 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
+import com.fredericoffs.sales.entities.Category;
 import com.fredericoffs.sales.entities.Order;
 import com.fredericoffs.sales.entities.User;
 import com.fredericoffs.sales.entities.enums.OrderStatus;
+import com.fredericoffs.sales.repositories.CategoryRepository;
 import com.fredericoffs.sales.repositories.OrderRepository;
 import com.fredericoffs.sales.repositories.UserRepository;
 
@@ -25,6 +27,9 @@ public class TestConfig implements CommandLineRunner {
 
 	@Autowired
 	private OrderRepository orderRepositoy;
+
+	@Autowired
+	private CategoryRepository categoryRepository;
 
 	// Tudo que foz colocado dentro deste método será executado quando a app for
 	// iniciada
@@ -44,6 +49,12 @@ public class TestConfig implements CommandLineRunner {
 		Order o3 = new Order(null, Instant.parse("2019-07-22T15:21:22Z"), OrderStatus.PAID, u1);
 
 		orderRepositoy.saveAll(Arrays.asList(o1, o2, o3));
+
+		Category cat1 = new Category(null, "Electronics");
+		Category cat2 = new Category(null, "Books");
+		Category cat3 = new Category(null, "Computers");
+
+		categoryRepository.saveAll(Arrays.asList(cat1, cat2, cat3));
 
 	}
 

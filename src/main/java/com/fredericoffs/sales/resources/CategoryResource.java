@@ -9,30 +9,30 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.fredericoffs.sales.entities.User;
-import com.fredericoffs.sales.services.UserService;
+import com.fredericoffs.sales.entities.Category;
+import com.fredericoffs.sales.services.CategoryService;
 
 // recurso web implementado por um controlador REST
 @RestController
 // identifica o endereço 
-@RequestMapping(value = "/user")
-public class UserResource {
+@RequestMapping(value = "/categories")
+public class CategoryResource {
 
 	// injecao de dependência do service, userResource depende o UserService
 	@Autowired
-	private UserService service;
+	private CategoryService service;
 
 	// retornar resposta de requisição web
 	// testar o recurso
 	@GetMapping
-	public ResponseEntity<List<User>> findAll() {
-		List<User> list = service.findAll();
+	public ResponseEntity<List<Category>> findAll() {
+		List<Category> list = service.findAll();
 		return ResponseEntity.ok().body(list);
 	}
 
 	@GetMapping(value = "/{id}")
-	public ResponseEntity<User> findById(@PathVariable Long id) {
-		User obj = service.findById(id);
+	public ResponseEntity<Category> findById(@PathVariable Long id) {
+		Category obj = service.findById(id);
 		return ResponseEntity.ok().body(obj);
 
 	}
