@@ -15,7 +15,7 @@ import com.fredericoffs.sales.services.UserService;
 // recurso web implementado por um controlador REST
 @RestController
 // identifica o endereço 
-@RequestMapping(value = "/user")
+@RequestMapping(value = "/users")
 public class UserResource {
 
 	// injecao de dependência do service, userResource depende o UserService

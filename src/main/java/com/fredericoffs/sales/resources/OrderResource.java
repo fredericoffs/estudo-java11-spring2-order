@@ -15,7 +15,7 @@ import com.fredericoffs.sales.services.OrderService;
 // recurso web implementado por um controlador REST
 @RestController
 // identifica o endereço 
-@RequestMapping(value = "/order")
+@RequestMapping(value = "/orders")
 public class OrderResource {
 
 	// injecao de dependência do service, userResource depende o OrderService
