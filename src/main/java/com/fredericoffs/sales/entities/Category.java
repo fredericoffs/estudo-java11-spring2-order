@@ -26,6 +26,7 @@ public class Category implements Serializable {
 
 	// o SET Garante que não vai haver mais de um produto com a mesma categoria,
 	// o mesmo produto não pode ter mais de uma categoria
+	// colocar o nome mappedBy da coleção da outra classe
 	@JsonIgnore
 	@ManyToMany(mappedBy = "categories")
 	private Set<Product> products = new HashSet<>();

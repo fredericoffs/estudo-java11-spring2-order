@@ -28,7 +28,6 @@ public class Product implements Serializable {
 	private String imgUrl;
 
 	// Escolher a classe que vai colocar as anotações
-	// colocar o nome da coleção da outra classe
 	// o SET Garante que não vai haver mais de um produto com a mesma categoria,
 	// o mesmo produto não pode ter mais de uma categoria
 	@ManyToMany
