@@ -11,6 +11,8 @@ import javax.persistence.MapsId;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "tb_payment")
 public class Payment implements Serializable {
@@ -22,9 +24,11 @@ public class Payment implements Serializable {
 	private Long id;
 	private Instant moment;
 
-	// classe dependente
+	// classe dependente - vai usar o id da outra classe, no caso será o valor do id
+	// order
 	@OneToOne
 	@MapsId
+	@JsonIgnore
 	private Order order;
 
 	public Payment() {
