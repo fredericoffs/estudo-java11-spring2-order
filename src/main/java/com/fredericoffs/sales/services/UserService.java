@@ -15,17 +15,21 @@ public class UserService {
 
 	// injeção de dependência
 	@Autowired
-	private UserRepository userRepository;
+	private UserRepository repository;
 
 	// Método para retornar todos os objetos do DB
 	public List<User> findAll() {
-		return userRepository.findAll();
+		return repository.findAll();
 	}
-	
-	// 
+
+	//
 	public User findById(Long id) {
-		Optional<User> obj = userRepository.findById(id);
+		Optional<User> obj = repository.findById(id);
 		return obj.get();
+	}
+
+	public User insert(User obj) {
+		return repository.save(obj);
 	}
 
 }

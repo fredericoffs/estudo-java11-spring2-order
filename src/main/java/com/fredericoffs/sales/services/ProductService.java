@@ -13,15 +13,15 @@ import com.fredericoffs.sales.repositories.ProductRepository;
 public class ProductService {
 
 	@Autowired
-	private ProductRepository userRepository;
+	private ProductRepository repository;
 
 	public List<Product> findAll() {
-		return userRepository.findAll();
+		return repository.findAll();
 	}
 	
 	// 
 	public Product findById(Long id) {
-		Optional<Product> obj = userRepository.findById(id);
+		Optional<Product> obj = repository.findById(id);
 		return obj.get();
 	}
 

@@ -15,16 +15,16 @@ public class CategoryService {
 
 	// injeção de dependência
 	@Autowired
-	private CategoryRepository categoryRepository;
+	private CategoryRepository repository;
 
 	// Método para retornar todos os objetos do DB
 	public List<Category> findAll() {
-		return categoryRepository.findAll();
+		return repository.findAll();
 	}
 	
 	// 
 	public Category findById(Long id) {
-		Optional<Category> obj = categoryRepository.findById(id);
+		Optional<Category> obj = repository.findById(id);
 		return obj.get();
 	}
 
