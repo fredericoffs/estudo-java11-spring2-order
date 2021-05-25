@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.fredericoffs.sales.entities.User;
 import com.fredericoffs.sales.repositories.UserRepository;
+import com.fredericoffs.sales.services.exceptions.ResourceNotFoundException;
 
 // registrar a classe como um componente(service) do Spring
 @Service
@@ -25,7 +26,7 @@ public class UserService {
 	//
 	public User findById(Long id) {
 		Optional<User> obj = repository.findById(id);
-		return obj.get();
+		return obj.orElseThrow(() -> new ResourceNotFoundException(id));
 	}
 
 	public User insert(User obj) {
